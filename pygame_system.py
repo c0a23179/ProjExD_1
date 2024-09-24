@@ -14,6 +14,7 @@ def main():
     enn = pg.Surface((20, 20))
     pg.draw.circle(enn, (255, 0, 0), (10, 10), 10)
     enn.set_colorkey((0, 0, 0))
+    
 
     tmr = 0
     while True:
