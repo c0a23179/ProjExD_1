@@ -37,7 +37,7 @@ def main():
         screen.blit(kk_img, kk_rct)
 
         pg.display.update()
-        tmr += 1        
+        tmr += 1       #aaa 
         clock.tick(400)
 
 
