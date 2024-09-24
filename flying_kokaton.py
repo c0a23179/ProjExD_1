@@ -16,28 +16,23 @@ def main():
     kk_rct = kk_img.get_rect()
     kk_rct.center = 300, 200
     tmr = 0
-    xx=0
+    xx=-1
     yy=0
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
-        kk_rct.move_ip((-1,0))
         key_lst = pg.key.get_pressed()  # 練習8-3：キーの押下状態を取得
         if key_lst[pg.K_UP]:  # 上矢印キーがTrueなら
-            xx=0
-            yy=-1  # こうかとんの縦座標を-1する
+            yy= yy-1  # こうかとんの縦座標を-1する
         if key_lst[pg.K_DOWN]:  # 下矢印キーがTrueなら
-            xx= 0
-            yy=+1# こうかとんの縦座標を+1する
+            yy= yy+1# こうかとんの縦座標を+1する
         if key_lst[pg.K_LEFT]:  # 下矢印キーがTrueなら
-            xx=-1
-            yy=0  # こうかとんの横座標を-1する
+            xx= xx-1 # こうかとんの横座標を-1する
         if key_lst[pg.K_RIGHT]:
               # 下矢印キーがTrueなら
-            xx=+2
-            yy=0
+            xx= xx+2
         kk_rct.move_ip((xx, yy))  # こうかとんの横座標を+1する
-        xx=0
+        xx=-1
         yy=0
         x = -(tmr%3200)
         screen.blit(bg_img, [x, 0])
